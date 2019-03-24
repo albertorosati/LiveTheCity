@@ -4,10 +4,6 @@ if(!isset($_SESSION['email'])) {
 	header('Location: index.php');
 	exit();
 }
-
-if($_SESSION['tipo'] == "1") {
-	header('Location: kid.php');
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,12 +35,12 @@ if($_SESSION['tipo'] == "1") {
     <link href="css/themes/all-themes.css" rel="stylesheet" />
 </head>
 
-<body class="theme-red">
+<body class="theme-blue">
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
             <div class="preloader">
-                <div class="spinner-layer pl-red">
+                <div class="spinner-layer pl-blue">
                     <div class="circle-clipper left">
                         <div class="circle"></div>
                     </div>
@@ -170,7 +166,7 @@ if($_SESSION['tipo'] == "1") {
         <!-- Left Sidebar -->
         <aside id="leftsidebar" class="sidebar">
             <!-- User Info -->
-            <div class="user-info">
+            <div class="user-info" style="background-image: url('images/user-img-kid-background.jpg')";>
                 <div class="image">
                     <img src="/images/profpics/<?php echo $_SESSION['profile_pic'];?>.jpg" width="48" height="48" alt="User" />
                 </div>
@@ -198,45 +194,19 @@ if($_SESSION['tipo'] == "1") {
                             <i class="material-icons">home</i>
                             <span>Home</span>
                         </a>
-                    </li>
+					</li>
 					<li>
-                        <a href="new.php">
-                            <i class="material-icons">add</i>
-                            <span>Pubblica Annuncio</span>
+                        <a href="home.php">
+                            <i class="material-icons">terrain</i>
+                            <span>Parchi</span>
                         </a>
-                    </li>
+					</li>
 					<li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">near_me</i>
-                            <span>Annunci</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="offerte.php">Offerte</a>
-                            </li>
-                            <li>
-                                <a href="richieste.php">Richieste</a>
-                            </li>
-                        </ul>
-                    </li>
-					<li>
-                        <a href="events.php">
+                        <a href="home.php">
                             <i class="material-icons">event</i>
-                            <span>Eventi</span>
+                            <span>Iniziative per bambini</span>
                         </a>
-                    </li>
-					<li>
-                        <a href="tourism.php">
-                            <i class="material-icons">flight_takeoff</i>
-                            <span>Turismo Esperienziale</span>
-                        </a>
-                    </li>
-					<li>
-                        <a href="car_sharing.php">
-                            <i class="material-icons">directions_car</i>
-                            <span>Car Sharing</span>
-                        </a>
-                    </li>
+					</li>
                 </ul>
             </div>
             <!-- #Menu -->
@@ -405,51 +375,9 @@ if($_SESSION['tipo'] == "1") {
 	
 	<section class="content">
     
-			<div class="block-header">
-                <h2>AVVISI</h2>
-            </div>
 			
 			
-			
-			    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="card">
-                        <div class="header bg-red">
-                            <h2>
-                                Interruzione Linea Elettrica <small>da Amministrazione Comunale</small>
-                            </h2>
-                        </div>
-                        <div class="body">
-                            Si avvisa la gentile utenza del quartiere di Mancasale, che il giorno 26/03/2019, dalle ore 18 alle ore 21 sarà vietata la sosta nella via principale, a causa dei lavori sul manto stradale, per la stesura della rete a fibra ottica.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="card">
-                        <div class="header bg-red">
-                            <h2>
-                                Sciopero dei netturbini <small>da Amministrazione Comunale</small>
-                            </h2>
-                        </div>
-                        <div class="body">
-                            Si avvisa la gentile utenza del quartiere di Mancasale, che il giorno 30/03/2019, la normale attività di raccolta  rifiuti non sarà garantita a causa di uno sciopero dei netturbini.
-Ci scusiamo per il disagio arrecatoVi.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="card">
-                        <div class="header bg-red">
-                            <h2>
-                                Interruzione Linea Elettrica <small>da Amministrazione Comunale</small>
-                            </h2>
-                        </div>
-                        <div class="body">
-                            Si avvisa la gentile utenza del quartiere di Mancasale, che il giorno 02/04/2019, a causa del previsto mal tempo, e delle numerose precipitazioni, l attività didattica sarà sospesa per tutti gli indirizzi di scuola primaria e secondaria.
-E’ consigliato rimanere in casa, ed evitare di uscire se non strettamente necessario.
-                        </div>
-                    </div>
-                </div>
-            </div>
+			    
 			
 			
 			<br>
@@ -518,15 +446,13 @@ E’ consigliato rimanere in casa, ed evitare di uscire se non strettamente nece
 					
 						}
 					}
-					$nome = array("Giuseppe Bianchi", "Mariangela Verdi", "Mario Rossi");
+					$nome = array("Oscar Pugliesi", "Mauro Bianchi", "Francesco Baresi");
 					$data = array( "24/03/2019", "24/03/2019", "23/03/2019" );
-					$text = array( "Ragazzi guardate questo articolo! Ve l'avevo detto che quest’app avrebbe spaccato!",
-"Qualcuno di voi ha delle uova nel frigo?
-Devo fare una torta di mele per mio figlio, ma purtroppo le ho finite.",
-"Chi mi spiega come cambiare immagine del profilo? 
-Proprio non riesco a capire come fare.."					);
-					$profile_pic = array( "../../images/user-lg.jpg", "images/52.jpg", "images/profpics/default.jpg" );
-					$news_pic = array( "images/news.jpg", "images/uova.jpg", "images/dubbio.jpg");
+					$text = array( "Cerco compagno per giocare e costruire un fantastico mondo su Minecraft",
+"Vi piace il mio disegno? Fatemi sapere",
+"Non riesco a capire come funzionano le tabelline. Odio la matematica!");
+					$profile_pic = array( "https://randomuser.me/api/portraits/lego/1.jpg", "https://randomuser.me/api/portraits/lego/7.jpg", "https://randomuser.me/api/portraits/lego/0.jpg" );
+					$news_pic = array( "https://store-images.s-microsoft.com/image/apps.608.13510798885735219.cf55aeca-e690-41e0-a88b-41b0e517a3be.c94e1bfa-1b68-4cf5-9954-f967168480b4?mode=scale&q=90&h=1080&w=1920", "https://cdn.theatlantic.com/assets/media/img/mt/2018/03/VasiliaChristidou_04g/lead_720_405.jpg?mod=1533691928", "https://images2.corriereobjects.it/methode_image/2018/11/04/Tecnologia/Foto%20Tecnologia%20-%20Trattate/2800-kE4G-U3050105349284793H-1600x960@Corriere-Web-Sezioni_BC.jpg?v=201811051447");
 					
 					
 					for ($i = 0; $i < 3; $i++) {
@@ -554,7 +480,7 @@ Proprio non riesco a capire come fare.."					);
                                                     </div>
                                                     <div class="post-content">
                                                         <img src="'.$news_pic[$i].'" class="img-responsive" style="object-fit: cover;
-width: 100%; max-height: 300px; object-position: bottom;"/>
+width: 100%; max-height: 300px; object-position: center;"/>
                                                     </div>
                                                 </div>
                                             </div>

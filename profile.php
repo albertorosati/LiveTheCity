@@ -439,9 +439,9 @@ if(!isset($_SESSION['email'])) {
                                         Hai preso parte a 12 eventi
                                     </div><div class="progress">
 									<div class="progress-bar bg-red progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                                     style="width: 100%"></div>
+                                     style="width: 20%"></div>
 									 
-                            </div><small>8 offerte al prossimo obiettivo</small>
+                            </div><small>8 eventi al prossimo obiettivo</small>
                                 </li>
                                 <li>
                                     <div class="title col-green font-bold">
@@ -454,7 +454,7 @@ if(!isset($_SESSION['email'])) {
 									<div class="progress-bar bg-green progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
                                      style="width: 70%"></div>
 									 
-                            </div><small>3 offerte al prossimo obiettivo</small>
+                            </div><small>3 aiuti al prossimo obiettivo</small>
                                 </li>
                                 <li>
                                     <div class="title col-blue font-bold">

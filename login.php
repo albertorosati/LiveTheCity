@@ -21,6 +21,7 @@ if (isset($_POST['email'])) {
 				$_SESSION['cognome'] = $row['surname'];
 				$_SESSION['professione'] = $row['professione'];
 				$_SESSION['profile_pic'] = $row['profile_pic'];
+				$_SESSION['tipo'] = $row['tipo'];
 				$_SESSION['skills'] = $row['skills'];
                 $text = "SELECT quartieri.id_quartiere FROM quartieri inner join users on(id_quartiere=fk_id_quartiere) WHERE id_user ='$row ['id_user']'";
 				$ris=$conn->query($text);
