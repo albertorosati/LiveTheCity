@@ -192,55 +192,7 @@ if(!isset($_SESSION['email'])) {
             </div>
             <!-- #User Info -->
             <!-- Menu -->
-            <div class="menu">
-                <ul class="list">
-                    <li class="header">NAVIGAZIONE</li>
-                    <li>
-                        <a href="home.php">
-                            <i class="material-icons">home</i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-					<li>
-                        <a href="new.php">
-                            <i class="material-icons">add</i>
-                            <span>Pubblica Annuncio</span>
-                        </a>
-                    </li>
-					<li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">near_me</i>
-                            <span>Annunci</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="offerte.php">Offerte</a>
-                            </li>
-                            <li>
-                                <a href="richieste.php">Richieste</a>
-                            </li>
-                        </ul>
-                    </li>
-					<li>
-                        <a href="events.php">
-                            <i class="material-icons">event</i>
-                            <span>Eventi</span>
-                        </a>
-                    </li>
-					<li>
-                        <a href="tourism.php">
-                            <i class="material-icons">flight_takeoff</i>
-                            <span>Turismo Esperienziale</span>
-                        </a>
-                    </li>
-					<li>
-                        <a href="car_sharing.php">
-                            <i class="material-icons">directions_car</i>
-                            <span>Car Sharing</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <?php require 'include/menu.php';?>
             <!-- #Menu -->
             <!-- Footer -->
             <div class="legal">
